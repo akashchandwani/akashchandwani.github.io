@@ -1,5 +1,5 @@
 baseURL = 'https://akashchandwani.github.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = "akashchandwani.github.io"
 theme = "ananke"
 publishDir = "docs"
