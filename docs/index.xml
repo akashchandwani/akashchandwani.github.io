@@ -1,22 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>akashchandwani.github.io</title>
-    <link>https://akashchandwani.github.io/</link>
-    <description>Recent content on akashchandwani.github.io</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 28 Sep 2022 23:19:43 +0530</lastBuildDate><atom:link href="https://akashchandwani.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>What is Gitleaks and how to use it?</title>
-      <link>https://akashchandwani.github.io/posts/what-is-gitleaks/</link>
-      <pubDate>Wed, 28 Sep 2022 23:19:43 +0530</pubDate>
-      
-      <guid>https://akashchandwani.github.io/posts/what-is-gitleaks/</guid>
-      <description>Gitleaks is an open source tool used to detect and prevent secrets (passwords / api-keys) checked-in to your git repository. The main advantage of Gitleaks is that it not only scans your latest source code but also the entire git history identifying any secrets committed to your source code in the past as well.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Akash Chandwani</title><link>https://akashchandwani.github.io/</link><description>Recent content on Akash Chandwani</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 28 Sep 2022 23:19:43 +0530</lastBuildDate><atom:link href="https://akashchandwani.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>What is Gitleaks and how to use it?</title><link>https://akashchandwani.github.io/posts/what-is-gitleaks/</link><pubDate>Wed, 28 Sep 2022 23:19:43 +0530</pubDate><guid>https://akashchandwani.github.io/posts/what-is-gitleaks/</guid><description>Gitleaks is an open source tool used to detect and prevent secrets (passwords / api-keys) checked-in to your git repository. The main advantage of Gitleaks is that it not only scans your latest source code but also the entire git history identifying any secrets committed to your source code in the past as well.
 &amp;ldquo;Once your secrets are committed, assume it’s leaked.&amp;rdquo;
-&amp;ldquo;Use gitleaks before a hacker uses it to exploit you…&amp;rdquo; — Your friend at open source</description>
-    </item>
-    
-  </channel>
-</rss>
+&amp;ldquo;Use gitleaks before a hacker uses it to exploit you…&amp;rdquo; — Your friend at open source</description></item></channel></rss>

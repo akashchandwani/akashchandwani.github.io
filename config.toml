@@ -1,5 +1,19 @@
 baseURL = 'https://akashchandwani.github.io/'
 languageCode = 'en-us'
-title = "akashchandwani.github.io"
-theme = "ananke"
+title = "Akash Chandwani"
+theme = "hyde"
 publishDir = "docs"
+
+[Menus]
+  main = [
+    #   {Name = "About", URL = "about"},
+      {Name = "Github", URL = "https://github.com/akashchandwani/"},
+      {Name = "LinkedIn", URL = "https://www.linkedin.com/in/akashchandwani/"}
+  ]
+
+[params]
+  description = "Software Engineer || @ McKinsey & Company | All views expressed are mine."
+  disqusShortname = "spf13"
+#   themeColor = "theme-base-09"
+
+googleAnalytics = "Your tracking code"
