@@ -1,7 +1,7 @@
 baseURL = 'https://akashchandwani.github.io/'
 languageCode = 'en-us'
 title = "Akash Chandwani"
-theme = "themes/hyde"
+theme = "hyde"
 publishDir = "docs"
 
 [Menus]
