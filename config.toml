@@ -13,7 +13,7 @@ publishDir = "docs"
 
 [params]
   description = "Software Engineer || @ McKinsey & Company | All views expressed are mine."
-  disqusShortname = "spf13"
+  disqusShortname = "akashchandwani"
 #   themeColor = "theme-base-09"
 
 googleAnalytics = "Your tracking code"
