@@ -8,9 +8,9 @@ Gitleaks is an open source tool used to detect and prevent secrets (passwords / 
 
 > Once your secrets are committed, assume it’s leaked.
 
-|                                                                                                  ![Across columns](kenny-eliason-_Kmtj6UIlGo-unsplash.jpg)                                                                                                  |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| Photo by [Kenny Eliason](https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash]("https://unsplash.com/s/photos/hacker-kenny?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText") |
+|                                                                                                 ![Across columns](kenny-eliason-_Kmtj6UIlGo-unsplash.jpg)                                                                                                 |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Photo by [Kenny Eliason](https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/hacker-kenny?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) |
 
 
 
