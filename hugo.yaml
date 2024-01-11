@@ -61,7 +61,7 @@ params:
     enabled: true # needs to be explicitly set
     title: Akash Chandwani
     subtitle: "I am an experienced software professional with good amount of knowledge in the backend technologies. All views expressed are mine."
-    imageUrl: "/profile-picture.png"
+    imageUrl: "/profile-picture.webp"
     imageWidth: 150
     imageHeight: 150
     imageTitle: Profile Picture
