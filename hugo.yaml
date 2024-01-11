@@ -117,14 +117,10 @@ menu:
       name: Blogs
       url: /blog
       weight: 10
-    - identifier: categories
-      name: categories
-      url: /categories/
-      weight: 20
     - identifier: tags
       name: tags
       url: /tags/
-      weight: 30
+      weight: 20
     
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
