@@ -45,16 +45,16 @@ params:
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "/assets/16x16.png"
-    favicon16x16: "/assets/16x16.png"
-    favicon32x32: "/assets/32x32.png"
-    apple_touch_icon: "/apple-touch-icon.png"
-    safari_pinned_tab: "/apple-touch-icon.png"
+    favicon: "/assets/icons8-write-48.png"
+    favicon16x16: "/assets/icons8-write-48.png"
+    favicon32x32: "/assets/icons8-write-48.png"
+    apple_touch_icon: "/assets/icons8-write-96.png"
+    safari_pinned_tab: "/assets/icons8-write-96.png"
 
   label:
     text: "Akash Chandwani"
-    icon: /apple-touch-icon.png
-    iconHeight: 35
+    icon: /assets/icons8-write-96.png
+    # iconHeight: 35
 
   # profile-mode
   profileMode:
@@ -75,10 +75,10 @@ params:
     Content: My name is Akash Chandwani. I am a Senior Software Engineer at McKinsey & Company. I have 8 years of experience and have mostly worked on the backend and Java side of things
 
   socialIcons:
-    - name: x
-      url: "https://x.com/"
+    - name: medium
+      url: https://akashchandwani.medium.com
     - name: stackoverflow
-      url: "https://stackoverflow.com"
+      url: "https://stackoverflow.com/users/2045648/akash-chandwani"
     - name: github
       url: "https://github.com/akashchandwani"
 
