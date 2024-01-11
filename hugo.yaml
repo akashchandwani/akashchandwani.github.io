@@ -1,4 +1,4 @@
-baseURL: "akashchandwani.github.io/"
+baseURL: "https://akashchandwani.github.io/"
 title: Akash Chandwani
 paginate: 10
 theme: PaperMod
@@ -75,12 +75,12 @@ params:
     Content: My name is Akash Chandwani. I am a Senior Software Engineer at McKinsey & Company. I have 8 years of experience and have mostly worked on the backend and Java side of things
 
   socialIcons:
-    - name: medium
-      url: https://akashchandwani.medium.com
-    - name: stackoverflow
-      url: "https://stackoverflow.com/users/2045648/akash-chandwani"
     - name: github
       url: "https://github.com/akashchandwani"
+    - name: stackoverflow
+      url: "https://stackoverflow.com/users/2045648/akash-chandwani"
+    - name: linkedin
+      url: https://www.linkedin.com/in/akashchandwani/
 
   analytics:
     google:
