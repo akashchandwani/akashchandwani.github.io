@@ -29,7 +29,7 @@ The [pre-commit framework](https://pre-commit.com/) is a powerful tool that allo
     Customize the pre-commit configuration to include hooks for various checks, such as formatting, linting, and testing. The list of all supported hooks can be found [here](https://pre-commit.com/hooks.html).
 
 3. **Running Checks:**
-    Pre-commit hooks are automcatically executed you try to commit your changes. If the hook's checks are passed, changes are committed. If the checks fail, the commit does not take place, in which case you will need to make the necessary changes before you can commit your change. To manually run these checks without commit, you can run this command - `pre-commit run --all-files`.
+    Pre-commit hooks automatically run when you attempt to commit changes. If the hooks' checks pass, the changes are committed. If the checks fail, the commit does not occur, and you'll need to make the necessary changes before you can proceed with the commit. To manually run these checks without committing, use the command `pre-commit run --all-files`.
 
 ## Conclusion:
 
