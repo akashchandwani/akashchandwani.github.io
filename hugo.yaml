@@ -31,7 +31,7 @@ params:
   ShowPostNavLinks: false
   ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
-  ShowWordCount: false
+  ShowWordCount: true
   ShowRssButtonInSectionTermList: false
   UseHugoToc: true
   disableSpecial1stPost: false
@@ -60,7 +60,7 @@ params:
   profileMode:
     enabled: true # needs to be explicitly set
     title: Akash Chandwani
-    subtitle: "I am an experienced software professional with good amount of knowledge in the backend technologies. All views expressed are mine."
+    Subtitle: "A seasoned software engineer with over 8 years of experience, specializing in backend and server-side technologies. A perpetual learner dedicated to achieving excellence in my work. All expressed views are my own."
     imageUrl: "/profile-picture.webp"
     imageWidth: 150
     imageHeight: 150
@@ -72,13 +72,13 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Hi there \U0001F44B"
-    Content: My name is Akash Chandwani. I am a Senior Software Engineer at McKinsey & Company. I have 8 years of experience and have mostly worked on the backend and Java side of things
+    Content: "My name is Akash Chandwani, Welcome to my personal blog. I share my personal exerperience and learning here which I have gathererd over the years. All views expressed are mine."
 
   socialIcons:
     - name: github
-      url: "https://github.com/akashchandwani"
+      url: https://github.com/akashchandwani
     - name: stackoverflow
-      url: "https://stackoverflow.com/users/2045648/akash-chandwani"
+      url: https://stackoverflow.com/users/2045648/akash-chandwani
     - name: linkedin
       url: https://www.linkedin.com/in/akashchandwani/
 
