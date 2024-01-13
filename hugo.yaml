@@ -1,0 +1,135 @@
+baseURL: "https://akashchandwani.com/"
+title: Akash Chandwani
+paginate: 10
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: "G-7BMTDR29ZD"
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Akash Chandwani
+  description: "A blogging website to share my thoughts and experiences on software technologies and open source tools"
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Akash Chandwani
+  # author: ["Me", "You"] # multiple authors
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: false
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: false
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: true
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "/assets/icons8-write-48.png"
+    favicon16x16: "/assets/icons8-write-48.png"
+    favicon32x32: "/assets/icons8-write-48.png"
+    apple_touch_icon: "/assets/icons8-write-96.png"
+    safari_pinned_tab: "/assets/icons8-write-96.png"
+
+  label:
+    text: "Akash Chandwani"
+    icon: /assets/icons8-write-96.png
+    # iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: Akash Chandwani
+    Subtitle: "A seasoned software engineer with over 8 years of experience, specializing in backend and server-side technologies. I am a perpetual learner dedicated to achieving excellence in my work. All expressed views are my own."
+    imageUrl: "/profile-picture.webp"
+    imageWidth: 150
+    imageHeight: 150
+    imageTitle: Profile Picture
+    buttons:
+      - name: My blogs
+        url: blog
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: "My name is Akash Chandwani, Welcome to my personal blog. I share my personal exerperience and learning here which I have gathererd over the years. All views expressed are mine."
+
+  socialIcons:
+    - name: github
+      url: https://github.com/akashchandwani
+    - name: stackoverflow
+      url: https://stackoverflow.com/users/2045648/akash-chandwani
+    - name: linkedin
+      url: https://www.linkedin.com/in/akashchandwani/
+
+  analytics:
+    google:
+      SiteVerificationTag: "G-7BMTDR29ZD"
+    yandex:
+      SiteVerificationTag: "XYZabc"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  editPost:
+    URL: "https://github.com/akashchandwani/akashchandwani.github.io/tree/main/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: blogs
+      name: Blogs
+      url: /blog
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+    
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
+services:
+  disqus:
+    shortname: akashchandwani-github-io
