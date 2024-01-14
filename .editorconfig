@@ -9,6 +9,5 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 
 # Matches the exact files either package.json or .travis.yml
-[{pom.xml}]
+[*.md, *.yaml]
 indent_size = 2
-
