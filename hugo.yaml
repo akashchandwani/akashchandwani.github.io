@@ -110,15 +110,15 @@ params:
 menu:
   main:
     - identifier: search
-      name: Search
+      name: 🔍 Search
       url: /search/
       weight: 10
     - identifier: blogs
-      name: Blogs
+      name: 📖 Blogs
       url: /blog
       weight: 20
     - identifier: tags
-      name: tags
+      name: 🏷️ tags
       url: /tags/
       weight: 30
 
