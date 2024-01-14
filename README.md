@@ -2,7 +2,7 @@
 
 A personal blogging website created to share my thoughts and experiences on software technologies and open source tools.
 
-## Tecnologies used
+## Technologies used
 
 1. Static website builder: [Hugo](https://gohugo.io/)
 2. Theme: [PaperMod](https://themes.gohugo.io/themes/hugo-papermod/)
