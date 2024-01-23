@@ -84,7 +84,7 @@ params:
 
   analytics:
     google:
-      SiteVerificationTag: "G-7BMTDR29ZD" # TODO: Update Site Verification Tag
+      SiteVerificationTag: # TODO: Update Site Verification Tag
 
   cover:
     hidden: true # hide everywhere but not in structured data
