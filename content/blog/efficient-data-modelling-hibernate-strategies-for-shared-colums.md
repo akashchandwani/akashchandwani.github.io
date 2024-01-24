@@ -5,15 +5,15 @@ draft: false
 tags: ["java", "hibernate", "orm"]
 ---
 
-## Introduction
+# Introduction
 
 In database tables, common columns are often used to store metadata about entries, serving purposes such as auditing, multi-tenancy, and soft deletion. These common columns may include information like `created_by`, `updated_by`, `created_at`, and `last_modified_at`. While it's possible to duplicate these columns in entity objects, there's a more efficient way to handle this. Let's explore that.
 
-## Scenario
+# Scenario
 
 Consider a scenario where a set of resource tables shares common columns, such as `created_at` and `last_modified_at`. When mapping these tables to (javax.persistence) entities, we notice that all entity classes have common fields like `created_at` and `last_modified_at`.
 
-## Implementation
+# Implementation
 
 To adhere to the DRY (Don't Repeat Yourself) principle and leverage inheritance, we can create a parent class named `ParentEntity.java` to encapsulate these common attributes. Since we don't intend to create an object of this class, let's make it abstract.
 

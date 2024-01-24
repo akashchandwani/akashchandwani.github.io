@@ -11,13 +11,13 @@ tags: ["gitleaks", "git", "security"]
 
 *"Use Gitleaks before a hacker uses it to exploit you."*
 
-## How to Use Gitleaks?
+# How to Use Gitleaks?
 
 Before using Gitleaks, you need to install it. There are various installation options, and we'll cover the best ones based on different scenarios. You can find a list of all available options [here](https://github.com/zricethezav/gitleaks#getting-started).
 
 Here are the most common scenarios where Gitleaks proves useful:
 
-### Scenario 1: Detecting Secrets in Committed Code
+## Scenario 1: Detecting Secrets in Committed Code
 
 If you want to detect secrets committed to your Git source code repository:
 
@@ -30,7 +30,7 @@ If you want to detect secrets committed to your Git source code repository:
 
 If you find secrets, consider using tools like BFG Repo Cleaner to remove them.
 
-### Scenario 2: Preventing Secrets from Being Committed
+## Scenario 2: Preventing Secrets from Being Committed
 
 To ensure you don't commit any secrets:
 
@@ -44,7 +44,7 @@ To ensure you don't commit any secrets:
 8. For detailed information on detected secrets in the staging area: `gitleaks protect --staged -v`
 9. If secrets are detected, remove them and add the changes back to the staging area.
 
-### Scenario 3: Automating Pre-Commit Checks
+## Scenario 3: Automating Pre-Commit Checks
 
 Automate the process from Scenario 2 by adding the `gitleaks protect --staged -v` command to your pre-commit hook file.
 
@@ -56,7 +56,7 @@ Automate the process from Scenario 2 by adding the `gitleaks protect --staged -v
 
 You can also use the pre-commit script provided by the Gitleaks community.
 
-### Scenario 4: Team-wide Prevention
+## Scenario 4: Team-wide Prevention
 
 To ensure the entire team doesn't check in any secrets:
 
@@ -75,14 +75,14 @@ To ensure the entire team doesn't check in any secrets:
 6. Install pre-commit: `pre-commit install`
 7. When committing, the pre-commit hook checks for secrets. Make sure each developer installs pre-commit using steps 1 and 6.
 
-### Scenario 5: CI Integration
+## Scenario 5: CI Integration
 
 Scan the project whenever anyone pushes code to the repository using `gitleaks detect` in CI tools like Github Actions.
 
-### Scenario 6: Using Gitleaks with Non-Git Repositories
+## Scenario 6: Using Gitleaks with Non-Git Repositories
 
 Gitleaks can be used with any source code repository, even if not version-controlled by Git. Use Gitleaks with a non-Git repository: `gitleaks detect --no-git`
 
-## Conclusion
+# Conclusion
 
 This blog covers various scenarios on how to use Gitleaks to detect and protect your source code from accidental leaks. The next blog will delve into how to remove detected secrets from your source code repository.

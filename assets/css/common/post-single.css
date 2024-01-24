@@ -44,29 +44,29 @@
 }
 
 .post-content h1 {
-    margin: 40px auto 32px;
-    font-size: 40px;
-}
-
-.post-content h2 {
-    margin: 40px auto 32px;
-    font-size: 40px;
-}
-
-.post-content h3 {
-    font-size: 32px;
-}
-
-.post-content h4 {
-    font-size: 28px;
-}
-
-.post-content h5 {
+    margin: 24px auto 22px;
     font-size: 24px;
 }
 
-.post-content h6 {
+.post-content h2 {
+    margin: 22px auto 20px;
     font-size: 22px;
+}
+
+.post-content h3 {
+    font-size: 20px;
+}
+
+.post-content h4 {
+    font-size: 20px;
+}
+
+.post-content h5 {
+    font-size: 20px;
+}
+
+.post-content h6 {
+    font-size: 20px;
 }
 
 .post-content a,
