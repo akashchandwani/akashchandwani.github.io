@@ -13,7 +13,7 @@ A personal blogging website created to share my thoughts and experiences on soft
 2. Run `pre-commit install -f` to install the `pre-commit` hooks in the repository
 3. Install hugo using the command: `brew install hugo`
 4. Install the theme submodule using the command: `git submodule update --init --recursive --remote`
-5. Install `pre-commit` extension in your text editor to maintain consistency in formatting
+5. Install `pre-commit` extension in your text editor to maintain consistency in formatting. To install, run: `brew install pre-commit` and then `pre-commit-install` to update the pre-commit hook in your local repository
 
 ## Frequently used commands
 
