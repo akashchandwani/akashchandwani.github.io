@@ -104,11 +104,11 @@ JVM-Orchestration,OS-Thread-8,1
 
 ## Benefit of using Virtual Threads
 
-The main advantage of using Virtual Thread is that your application would now be able to **use greater number of threads** than they were able to use before. This is because the Java Virtual Machine (JVM) would assume responsibility of coordinating requests to and from the Operating System, managing them efficiently. As a result, numerous Virtual threads can bypass the waiting period associated with I/O operations and the Operating System, making them accessible to the next task.
+The main advantage of using Virtual Thread is that your application would now be able to **use greater number of threads** than they were able to use before. This is because the Java Virtual Machine (JVM) would assume responsibility of coordinating requests to the Operating System, managing them efficiently. As a result, numerous Virtual threads can bypass the waiting period associated with I/O operations and the Operating System, making them accessible to the next task.
 
 # So why is our application faster now?
 
-The configuration we added earlier, simply update the executors of Tomcat to use **Virtual Threads** rather than the default Platform Threads. By default, Tomcat associates one HTTP request with one Platform thread. However, with the Virtual Threads configuration, Tomcat can efficiently manage multiple concurrent requests per underlying Thread within each worker pool, enabling more effective handling of background tasks.
+The configuration we added earlier, simply updated the executors of Tomcat to use **Virtual Threads** rather than the default Platform Threads. By default, Tomcat associates one HTTP request with one Platform thread which associates with one OS thread. However, with the Virtual Threads configuration, Tomcat can efficiently manage multiple concurrent requests as every request will associate with one virtual thread which will not hold/block the OS Threads during the execution, enabling more virtual threads to be processed with limited number of OS threads.
 
 # References
 
