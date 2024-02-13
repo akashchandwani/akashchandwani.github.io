@@ -47,6 +47,7 @@
     const config = {
       startOnLoad: true,
       securityLevel: 'loose',
+      theme: localStorage.getItem("pref-theme") === "light" ? "light": "dark",
       sankey: {
         height: 400,
         width: 600,
