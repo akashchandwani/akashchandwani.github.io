@@ -42,18 +42,9 @@ params:
   showtoc: false
   tocopen: false
 
-  assets:
-    # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
-    favicon: "/assets/icons8-write-48.png"
-    favicon16x16: "/assets/icons8-write-48.png"
-    favicon32x32: "/assets/icons8-write-48.png"
-    apple_touch_icon: "/assets/icons8-write-96.png"
-    safari_pinned_tab: "/assets/icons8-write-96.png"
-
   label:
-    text: "Akash Chandwani"
-    icon: /assets/icons8-write-96.png
+    text: "👨‍💻 Akash Chandwani"
+    # icon: /assets/icons8-write-96.png
     # iconHeight: 35
 
   # profile-mode
