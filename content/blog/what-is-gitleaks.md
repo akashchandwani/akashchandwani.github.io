@@ -5,7 +5,7 @@ draft: false
 tags: ["gitleaks", "git", "security"]
 ---
 
-**Gitleaks** is an open-source tool designed to detect and prevent secrets (passwords/api-keys) checked into your Git repository. Its main advantage lies in scanning not only your latest source code but also the entire Git history, identifying any secrets committed in the past.
+**Gitleaks** is an open source tool used to detect and prevent secrets (passwords / api-keys) checked-in to your git repository. The main advantage of Gitleaks is that it not only scans your latest source code but also the entire git history identifying any secrets committed to your source code in the past as well.
 
 *"Once your secrets are committed, assume it’s leaked."*
 
@@ -13,76 +13,99 @@ tags: ["gitleaks", "git", "security"]
 
 # How to Use Gitleaks?
 
-Before using Gitleaks, you need to install it. There are various installation options, and we'll cover the best ones based on different scenarios. You can find a list of all available options [here](https://github.com/zricethezav/gitleaks#getting-started).
+Before you can use Gitleaks, you will need to install it. There are several ways to install it. We will cover the best installation option according to the scenarios discussed below. [Here](https://github.com/zricethezav/gitleaks#getting-started) is a list of all available options if you want to visit it now.
 
-Here are the most common scenarios where Gitleaks proves useful:
+There are several scenarios where you would find Gitleaks useful. I have listed down the most common scenarios below:
 
-## Scenario 1: Detecting Secrets in Committed Code
+## Scenario 1:
 
-If you want to detect secrets committed to your Git source code repository:
+***Everything is committed in my git source code repository and I want to find if there are/were any secrets committed.***
 
-1. Install Gitleaks on your system.
-    - Mac users: `brew install gitleaks`
-    - Windows and Linux users: Download the appropriate version from [here](https://github.com/zricethezav/gitleaks/releases).
-2. Open the terminal and navigate to your source code repository: `cd <path-to-your-source-code-repository>`
-3. Run the command to find secrets in your Git repository: `gitleaks detect`
-4. For detailed information on detected secrets: `gitleaks detect -v`
+This is the most common scenario if you want to detect any secrets committed to your git source code repository. For this, you can:
 
-If you find secrets, consider using tools like BFG Repo Cleaner to remove them.
+1. Install gitleaks on your system.
 
-## Scenario 2: Preventing Secrets from Being Committed
+   Mac users can install gitleaks via homebrew using the command — `brew install gitleaks`.
+   Windows and Linux users can visit the release page of Gitleaks [here](https://github.com/zricethezav/gitleaks/releases) and download and install the appropriate version from there.
+1. Open terminal and go to the source code repository you want to detect secrets from. `cd <path-to-your-source-code-repository>`
+2. Run the following command to find if there are secrets committed in your git repository — `gitleaks detect .`
+3. Run the following command to find the details of secrets committed in your git repository — `gitleaks detect -v`
 
-To ensure you don't commit any secrets:
+If you have found some secrets in your source code repository and you want to erase them, there are several tools that can help you. [BFG repo cleaner](https://rtyley.github.io/bfg-repo-cleaner/) is one of them. I will be soon writing a separate blog on how to use this tool…
 
-1. Install Gitleaks (refer to Scenario 1).
-2. Navigate to your source code repository: `cd <path-to-your-source-code-repository>`
-3. Run the command to find secrets in your code changes: `gitleaks protect` (Note: Untracked file secrets are not detected in this step)
-4. For detailed information on detected secrets: `gitleaks protect -v`
-5. Remove detected secrets.
-6. Move code changes to the staging area: `git add <files-to-add-to-staging-environment>` or `git add .`
-7. Run the command to find secrets in the staging area: `gitleaks protect --staged`
-8. For detailed information on detected secrets in the staging area: `gitleaks protect --staged -v`
-9. If secrets are detected, remove them and add the changes back to the staging area.
+## Scenario 2:
 
-## Scenario 3: Automating Pre-Commit Checks
+***I want to make sure that I don’t commit any secret in my git source code repository***
 
-Automate the process from Scenario 2 by adding the `gitleaks protect --staged -v` command to your pre-commit hook file.
+There is a famous saying — *Prevention is better than cure*. Similarly it’s better to `protect` your repository from accidental leaks rather than cleaning it later. For this, you can:
 
-1. Install Gitleaks (refer to Scenario 1).
-2. Navigate to your source code repository: `cd <path-to-your-source-code-repository>`
-3. Rename the `pre-commit.sample` file in `.git/hooks` to pre-commit: `mv .git/hooks/pre-commit.sample .git/hooks/pre-commit`
-4. Ensure the file has executing permission: `chmod +x .git/hooks/pre-commit`
-5. Open the pre-commit file and add: `exec gitleaks protect --staged -v`
+1. Install gitleaks on your system. (Refer step 1 in scenario 1)
+2. Open terminal and go to the source code repository you want to inspect for any secrets. `cd <path-to-your-source-code-repository>`
+3. Run the following command to find any secrets in your code changes — `gitleaks protect` . (Note: Secrets in untracked files are not detected in this step)
+4. Run the following command to find the details the secrets in your code changes— `gitleaks protect -v`
+5. Remove any secrets that were detected in step 3 and step 4.
+6. Move your code changes to staging area by using the command — `git add <files-to-add-to-staging-environment>`. Use `git add .` to move all code changes to the staging area.
+7. Run the following command to find if there are any secrets in the staging area in your git repository — `gitleaks protect --staged`
+8. Run the following command to find the details if there are secrets in the staging area — `gitleaks protect --staged -v`
+9.  If there were any secrets detected in step 7 and step 8. Remove the secrets and add the changes back to the staging area.
 
-You can also use the pre-commit script provided by the Gitleaks community.
+## Scenario 3:
 
-## Scenario 4: Team-wide Prevention
+***I want to automate the process of checking secret in my code changes in before I commit it***
 
-To ensure the entire team doesn't check in any secrets:
+In this scenario, what we want to automate the process mentioned in scenario 2. As a human we are prone to making mistakes, and sometimes we might forget to check if we are adding secrets in our commits. For this, we can add `gitleaks protect --staged -v` command in our pre-commit hook file. Follow the steps:
 
-1. Install pre-commit using the methods [mentioned here](https://pre-commit.com/#installation).
-2. Navigate to your source code repository: `cd <path-to-your-source-code-repository>`
-3. Create a `.pre-commit-config.yaml`: `touch .pre-commit-config.yaml`
-4. Paste the content into the `.pre-commit-config.yaml` file:
-    ```yaml {linenos=table,linenostart=1,lineanchors=prefix}
-    repos:
-    - repo: https://github.com/zricethezav/gitleaks
-        rev: v8.11.2
-        hooks:
-        - id: gitleaks
-    ```
-5. Update Gitleaks version: `pre-commit autoupdate`
-6. Install pre-commit: `pre-commit install`
-7. When committing, the pre-commit hook checks for secrets. Make sure each developer installs pre-commit using steps 1 and 6.
+1. Install gitleaks in your system. (Refer step 1 in scenario 1)
+2. Open terminal and go to the source code repository you want to inspect for any secrets. `cd <path-to-your-source-code-repository>`
+3. Rename the `pre-commit.sample` file in your `.git/hooks` folder to pre-commit using the command — `mv .git/hooks/pre-commit.sample .git/hooks/pre-commit`
+4. Make sure the file has executing permission by running the following command — `chmod +x .git/hooks/pre-commit`
+5. Open the pre-commit file in your preferred editor and add the following line at the end of the file — `exec gitleaks protect --staged -v`
 
-## Scenario 5: CI Integration
+Instead of step 5, you can also choose to use the pre-commit script provided by the gitleaks community. For this, replace the content in your pre-commit file with the content with [this](https://github.com/zricethezav/gitleaks/blob/master/scripts/pre-commit.py).
 
-Scan the project whenever anyone pushes code to the repository using `gitleaks detect` in CI tools like Github Actions.
 
-## Scenario 6: Using Gitleaks with Non-Git Repositories
+## Scenario 4:
 
-Gitleaks can be used with any source code repository, even if not version-controlled by Git. Use Gitleaks with a non-Git repository: `gitleaks detect --no-git`
+***I want to make sure that my team does not check-in any secret in the source code repository***
 
-# Conclusion
+In the previous scenario we have automated the process of detecting secrets before it’s checked-in in your local repository. But in a more real scenario, a team works on the same source code repository and managing git-hooks in each of the individual’s machine could be cumbersome and manual process. For this, we can use a [pre-commit tool](https://pre-commit.com/) for managing this configuration across developer’s machine. The steps for it are:
 
-This blog covers various scenarios on how to use Gitleaks to detect and protect your source code from accidental leaks. The next blog will delve into how to remove detected secrets from your source code repository.
+1. Install pre-commit using one of the following ways mentioned [here](https://pre-commit.com/#installation).
+2. Open terminal and go to the source code repository you want to inspect for any secrets. `cd <path-to-your-source-code-repository>`
+3. Create a `.pre-commit-config.yaml`. Mac and linux users can use `touch` command for it — `touch .pre-commit-config.yaml`
+4. Add the content into the file from [here](https://gist.github.com/akashchandwani/4665bb3e211fed6197eb048ce756886a) or from the code in code reference section below.
+5. Update the version of gitleaks in the file using the following command — `pre-commit autoupdate`
+6. Install the pre-commit in your pre-commit hooks using the following command — `pre-commit install`
+7. Now when ever you commit, the `pre-commit` hook installed in your repository will check if any secrets are present in your changes. You will just need to make sure every of developer installs pre-commit using the step 1 and installs pre-commit using the command in step 7.
+
+### Code Reference:
+`pre-commit-config.yml` file used in step 4.
+
+```yaml
+repos:
+  - repo: https://github.com/zricethezav/gitleaks
+    rev: v8.11.2
+    hooks:
+      - id: gitleaks
+```
+
+## Scenario 5:
+
+***What if my team mate does not update his/her pre-commit hook file and checks-in a secret***
+
+Well, mistakes can happen from anyone. Also, you can’t make sure if every developer in your team has updated his/her pre-commit config. They can be ignorant and not follow the steps. The best way to make sure that secrets are not checked-in is at the entry point of your remote source code repository i.e., to scan the project once anyone pushes the code to the source code repository. This can be achieved by running `gitleaks detect` command in your remote source code repository when ever a code is checked into the repository. This can be configured via various CI tools.
+
+If your remote source code is in Github and you use `Github Actions` for your CI process, you can use [gitleaks in Github Actions](https://github.com/gitleaks/gitleaks-action) to detect any leaks from your repository.
+
+## Scenario 6:
+
+***I don’t use git, can I still use gitleaks to detect secrets in my source code?***
+
+Yes absolutely. You can use Gitleaks with any source code repository even if it’s not version controlled by git. To use gitleaks with non-git repository, use gitleaks detect with `--no-git` option.
+
+1. Install Gitleaks on your system (Refer step 1 in scenario 1)
+2. Run gitleaks detect command with --no-git option — `gitleaks detect --no-git`
+
+# Conclusion:
+
+In this blog we have seen various scenarios on how to we can use gitleaks to detect and protect our source code from accidental leaks. In my next blog I will write on how to remove secrets from your source code repository if you have detected it. Don’t forget to follow to stay updated… :)
