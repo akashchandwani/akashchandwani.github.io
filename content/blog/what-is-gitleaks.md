@@ -2,7 +2,7 @@
 title: "What is Gitleaks and How to Use It?"
 date: 2022-09-28T23:19:43+05:30
 draft: false
-tags: ["gitleaks", "git", "security"]
+tags: ["gitleaks", "git", "security", "pre-commit"]
 ---
 
 **Gitleaks** is an open source tool used to detect and prevent secrets (passwords / api-keys) checked-in to your git repository. The main advantage of Gitleaks is that it not only scans your latest source code but also the entire git history identifying any secrets committed to your source code in the past as well.
