@@ -66,12 +66,14 @@ params:
     Content: "My name is Akash Chandwani, Welcome to my personal blog. I share my personal exerperience and learning here which I have gathererd over the years. All views expressed are mine."
 
   socialIcons:
-    - name: github
-      url: https://github.com/akashchandwani
-    - name: stackoverflow
-      url: https://stackoverflow.com/users/2045648/akash-chandwani
     - name: linkedin
       url: https://www.linkedin.com/in/akashchandwani/
+    - name: credly
+      url: https://www.credly.com/users/akash-chandwani
+    - name: stackoverflow
+      url: https://stackoverflow.com/users/2045648/akash-chandwani
+    - name: github
+      url: https://github.com/akashchandwani
 
   analytics:
     google:
