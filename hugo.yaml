@@ -32,7 +32,7 @@ params:
   ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
   ShowWordCount: true
-  ShowRssButtonInSectionTermList: false
+  ShowRssButtonInSectionTermList: true
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
@@ -74,6 +74,8 @@ params:
       url: https://stackoverflow.com/users/2045648/akash-chandwani
     - name: github
       url: https://github.com/akashchandwani
+    - name: rss
+      url: https://akashchandwani.com/blog/index.xml
 
   analytics:
     google:
