@@ -1,6 +1,5 @@
 baseURL: "https://akashchandwani.com/"
 title: Akash Chandwani
-paginate: 10
 theme: PaperMod
 
 enableRobotsTXT: true
@@ -118,6 +117,9 @@ menu:
       name: 🔍 Search
       url: /search/
       weight: 30
+
+pagination:
+  pagerSize: 10
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true

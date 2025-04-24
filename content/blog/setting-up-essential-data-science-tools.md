@@ -20,13 +20,13 @@ Before installing a specific version of Python, it's good practice to check if y
 
 To find the path of the current Python executable, use:
 
-```
+```bash
 which python
 ```
 
 To check the version of Python installed, run:
 
-```
+```bash
 python -V
 ```
 
@@ -37,7 +37,7 @@ To manage different versions of Python, we'll use [pyenv](https://github.com/pye
 
 You can install pyenv using Homebrew. Run the following commands:
 
-```
+```bash
 brew update
 brew install pyenv
 ```
@@ -47,27 +47,27 @@ brew install pyenv
 Here are some useful `pyenv` commands:
 
 1. List available python versions:
-```
+```bash
 pyenv install -l
 ```
 
 2. Install a specific Python version:
-```
+```bash
 pyenv install 3.10
 ```
 
 3. Set a global Python version:
-```
+```bash
 pyenv global 3.10
 ```
 
 4. Set a local Python version for a directory:
-```
+```bash
 pyenv local 3.10
 ```
 
 5. Upgrade `pyenv`
-```
+```bash
 brew upgrade pyenv
 ```
 
@@ -86,7 +86,7 @@ Jupyter Notebooks are an essential tool for data analysis and visualization.
 
 ## Install Jupyter Lab
 
-```
+```bash
 pip install jupyterlab
 ```
 
@@ -94,7 +94,7 @@ pip install jupyterlab
 
 After installation, start Jupyter Lab with:
 
-```
+```bash
 jupyter lab
 ```
 
@@ -102,4 +102,4 @@ This command will open Jupyter Lab in your web browser, where you can create and
 
 # Summary
 
-By following these steps, you’ll have Python, Anaconda, and Jupyter Lab set up and ready for your data science projects. Each tool plays a crucial role in developing and managing your data science workflows efficiently.
+By following these steps, you'll have Python, Anaconda, and Jupyter Lab set up and ready for your data science projects. Each tool plays a crucial role in developing and managing your data science workflows efficiently.

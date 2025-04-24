@@ -60,6 +60,7 @@ Platform-Thread-7,OS-Thread-7,1
 Platform-Thread-8,OS-Thread-8,1
 
 ```
+
 ## Virtual Threads
 
 Virtual Threads, on the other hand, are user made threads scheduled by the Java Virtual Machine (JVM) rather than the underlying OS. Virtual threads introduce an abstraction layer between operating-system processes and application-level concurrency, allowing the JVM to mediate between the operating system and the program. This allows the JVM to manage more threads than the ones available on the underlying OS.

@@ -26,39 +26,39 @@ For Java, Groovy, Scala, and Sbt, you can use [SDKMAN!](https://sdkman.io/) to m
 
 To install SDKMAN!, run:
 
-```sh
+```bash
 curl -s "https://get.sdkman.io" | bash
 ```
 
 To list the versions of Java installed via SDKMAN!, run:
-```
+```bash
 sdk list java
 ```
 
 To install a specific version of Java, run:
-```
+```bash
 sdk install java <java_version>
 ```
 
 To make a version of Java the default, run:
-```
+```bash
 sdk default java <java_version>
 ```
 
 Similarly, you can manage Groovy, Scala, and Sbt versions using SDKMAN!:
 
 To install a specific version of Groovy, run:
-```
+```bash
 sdk install groovy <groovy_version>
 ```
 
 To install a specific version of Scala, run:
-```
+```bash
 sdk install scala <scala_version>
 ```
 
 To install a specific version of Sbt, run:
-```
+```bash
 sdk install sbt <sbt_version>
 ```
 
@@ -66,22 +66,22 @@ sdk install sbt <sbt_version>
 For Python, `pyenv` is a popular choice. It simplifies the process of installing and switching between multiple Python versions.
 
 To install pyenv, run:
-```
+```bash
 curl https://pyenv.run | bash
 ```
 
 To list the versions of Python installed via pyenv, run:
-```
+```bash
 pyenv versions
 ```
 
 To install a specific version of Python, run:
-```
+```bash
 pyenv install <python_version>
 ```
 
 To set a global version of Python, run:
-```
+```bash
 pyenv global <python_version>
 ```
 
@@ -90,23 +90,23 @@ pyenv global <python_version>
 The `gvm` (Go Version Manager) tool is useful for managing different versions of Go.
 
 To install `gvm`, run:
-```
+```bash
 brew update
 brew install goenv
 ```
 
 To list the versions of Go installed via gvm, run:
-```
+```bash
 gvm list
 ```
 
 To install a specific version of Go, run:
-```
+```bash
 gvm install go<go_version>
 ```
 
 To set a default version of Go, run:
-```
+```bash
 gvm use go<go_version> --default
 ```
 
@@ -115,22 +115,22 @@ For Node.js, `nvm` (Node Version Manager) is widely used. It allows you to insta
 
 To install `nvm`, run:
 
-```
+```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 ```
 
 To list the versions of Node.js installed via nvm, run:
-```
+```bash
 nvm ls
 ```
 
 To install a specific version of Node.js, run:
-```
+```bash
 nvm install <node_version>
 ```
 
 To set a default version of Node.js, run:
-```
+```bash
 nvm alias default <node_version>
 ```
 
