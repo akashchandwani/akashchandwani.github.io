@@ -75,6 +75,8 @@ params:
       url: https://github.com/akashchandwani
     - name: kaggle
       url: https://www.kaggle.com/akashchandwani
+    - name: leetcode
+      url: https://leetcode.com/u/akashchandwani/
     - name: rss
       url: https://akashchandwani.com/blog/index.xml
 
