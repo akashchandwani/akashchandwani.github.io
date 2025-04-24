@@ -74,6 +74,8 @@ params:
       url: https://stackoverflow.com/users/2045648/akash-chandwani
     - name: github
       url: https://github.com/akashchandwani
+    - name: kaggle
+      url: https://www.kaggle.com/akashchandwani
     - name: rss
       url: https://akashchandwani.com/blog/index.xml
 
