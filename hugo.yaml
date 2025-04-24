@@ -50,7 +50,7 @@ params:
   profileMode:
     enabled: true # needs to be explicitly set
     title: Akash Chandwani
-    Subtitle: "A seasoned software engineer with over 9 years of experience, specializing in backend and server-side technologies. I am a perpetual learner dedicated to achieving excellence in my work. All expressed views are my own."
+    Subtitle: "Coder. Learner. Builder."
     imageUrl: "/profile-picture.webp"
     imageWidth: 150
     imageHeight: 150
