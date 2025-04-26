@@ -23,7 +23,8 @@
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
 				"editorconfig.editorconfig",
-				"n3rds.image"
+				"n3rds.image",
+				"yzhang.markdown-all-in-one"
 			]
 		}
 	}
